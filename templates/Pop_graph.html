@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p3" %}
+
+{% block title %}Population Graph{% endblock %}
+
+{% block content %}
+  <script>
+  window.onload = function () {
+    var data = {{ data|tojson }};
+    var xValues = [];
+    var yValues = [];
+    for (var i = 0; i < data.length; i++) {
+      xValues.push(data[i].County);
+      yValues.push(data[i]["Housing Data"]["Total Housing Units"]);
+    }
+    var options = {
+      title: {
+        text: "Housing Units by County"
+      },
+      data: [
+        {
+          x: xValues,
+          y: yValues,
+          type: "bar"
+        }
+      ]
+    };
+    Plotly.newPlot("plot", options);
+  }
+  </script>
+  <div id="plot"></div>
+{% endblock %}

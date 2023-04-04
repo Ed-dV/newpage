@@ -1,0 +1,9 @@
+{% extends "page1.html" %}
+
+{% block content %}
+{{ super() }}
+
+{% if population %}
+<h3>The population is {{ population }}</h3>
+{% endif %}
+{% endblock %}

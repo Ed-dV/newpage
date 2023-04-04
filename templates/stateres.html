@@ -1,0 +1,10 @@
+{% extends "page2.html" %}
+
+{% block content %}
+{{ super() }}
+{% if resident %}
+  <h3>Residing in Group Quarters: {{ resident }}</h3>
+{% else %}
+  <p>No data available.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends   "layout.html" %}
+
+{% set active_page = "home" if active_page is none else active_page %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!--page content-->
+	<div class="back">
+		<h1>Food access data</h1>
+		<h3>What is food desert?</h3>
+		<h4>A food desert is an area that has limited access to affordable and nutritious food.</h4>
+		<div class="row">
+			<div class="column">
+				<img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2Zvb2QtZGVzZXJ0LTEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyOTB9fX0=" alt="food desert exa" height=100% width=100%>
+			</div>
+			<div class="column">
+				<img src="https://www.eachgreencorner.org/wp-content/uploads/2020/08/fast-food-trading-post.jpeg" alt="food desert exa2" height=100% width=100%>
+			</div>
+		</div>
+	</div>
+{% endblock %}

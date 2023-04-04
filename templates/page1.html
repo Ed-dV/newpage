@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p1" %}
+
+{% block title %}Population{% endblock %}
+{% block content %}
+    <div class="container">
+  <img src="https://researchleap.com/wp-content/uploads/2021/12/Population-data.jpeg" alt="population background" width=103%>
+  <div class="content">
+    <h1>Population</h1>
+  </div>
+</div>
+	<h2>Select a county</h2>
+	<form action="/p1r">
+	<select name="county">
+		{{ options }}
+	</select>
+	<br><br>
+	<input type="submit">
+	</form>
+{% endblock %}

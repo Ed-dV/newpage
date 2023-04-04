@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% set active_page = "p2" %}
+
+{% block title %}State Data{% endblock %}
+
+{% block content %}
+    <!--page content-->
+    <h1>State Data</h1>
+	<h2>Select a state</h2>
+	<form action="/p2">
+	<select name="State">
+		{{ options }}
+	</select>
+	<br><br>
+	<input type="submit">
+	</form>
+{% endblock %}
